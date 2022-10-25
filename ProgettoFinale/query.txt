@@ -1,0 +1,32 @@
+/******  query di select specifica per tabella ESEMPIO *********/
+SELECT * from computer WHERE `Id_catalogo` LIKE '%linux%' OR `anno`
+ LIKE '%linux%'OR `Nome_modello` LIKE '%linux%'OR `CPU` LIKE '%linux%'OR 
+`velocita_HZ` LIKE '%linux%'OR `RAM` LIKE '%linux%'OR `sistema_operativo`
+ LIKE '%linux%'OR `note` LIKE '%linux%'OR `URL` LIKE '%linux%'OR `tag`  LIKE '%linux%'
+
+/*********  seleziona i nomi delle colonne da una data tabella ***************/
+ SELECT `COLUMN_NAME` 
+FROM `INFORMATION_SCHEMA`.`COLUMNS` 
+WHERE `TABLE_SCHEMA`='museoinformaticatest' 
+    AND `TABLE_NAME`='computer';
+
+/*********  seleziona i nomi delle tabelle ***************/
+show TABLES
+
+/*********** QUERY DI INSERT  ESEMPIO *******************/
+INSERT INTO computer
+ (Id_catalogo, Nome_modello, anno, CPU, velocita_HZ, RAM, Hard_disk, sistema_operativo, note, tag) 
+VALUES (12335555555, 'asus' , 2000, 'rizen5' , 3.5 , '8 GB' ,' 1 TB',' android', 'ji', 'ji')
+
+
+/************  QUERY DI DELETE ESEMPIO *****************/
+DELETE FROM computer WHERE `Identificativo`= 'Compkkjk'
+
+/***********  QUERY PER AVERE IL NOME DELLE COLONNE NOT_NULLABLE **************/
+SELECT COLUMN_NAME FROM information_schema.columns WHERE table_name = 'computer'
+ and is_nullable = 'NO' ORDER BY `columns`.`COLUMN_NAME` ASC
+
+/******** QUERY DI UPDATE ESEMPIO *****************/
+UPDATE `periferica` SET `nome_modello`='arm 3 ',`tipologia`='tastiera ',
+`URL`='www.arm.com',`tag`='tastiera,perfiferica' WHERE `Identificativo`='perif4565'
+

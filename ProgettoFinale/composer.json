@@ -1,0 +1,20 @@
+{
+    "require": {
+        "php":">=8.0",
+        "monolog/monolog": "^2.6",
+            "league/plates": "^3.4",
+        "phpunit/phpunit": "^9.5"
+
+    }
+    
+,
+
+"autoload": {
+    "psr-4": {
+        "App\\": "src/",
+        "Utility\\":"utility/"
+    }
+}
+
+  
+}
